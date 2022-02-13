@@ -6,7 +6,7 @@
         {
             "type": "shell",
             "label": "g++", //与launch.json的preLaunchTask一致
-            "command": "D:/MinGW-w64/bin/gdb.exe", //注意
+            "command": "D:/MinGW-w64/bin/g++.exe", //注意
             "args": [
                 "-g",
                 "-Wall",
