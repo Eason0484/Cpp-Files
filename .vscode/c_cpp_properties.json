@@ -1,7 +1,7 @@
 {
     "configurations": [
         {
-            "compilerPath": "D:/MinGW-w64/bin/gdb.exe",
+            "compilerPath": "D:/MinGW-w64/bin/g++.exe",
             "name": "Win32", //根据平台选择
             "includePath": [
                 "${workspaceRoot}", //勿改
