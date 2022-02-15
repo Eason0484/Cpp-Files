@@ -391,7 +391,7 @@ void welcometogame()
     system("pause");
     system("cls");
     Pos(25, 12);
-    printf("用↑.↓.←.→分别控制蛇的移动， F1 为加速，2 为减速\n");
+    printf("用↑.↓.←.→分别控制蛇的移动， F1 为加速，F2 为减速\n");
     Pos(25, 13);
     printf("加速将能得到更高的分数。\n");
     system("pause");
