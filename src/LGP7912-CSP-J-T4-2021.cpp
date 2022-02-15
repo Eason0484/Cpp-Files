@@ -7,12 +7,14 @@ inline ll read()
 {
     ll x = 0, f = 1;
     char c = getchar();
-    while (!isdigit(c)) {
+    while (!isdigit(c))
+    {
         if (c == '-')
             f = -1;
         c = getchar();
     }
-    while (isdigit(c)) {
+    while (isdigit(c))
+    {
         x = x * 10 + c - '0', c = getchar();
     }
     return x * f;
@@ -32,9 +34,11 @@ void init()
 }
 void get()
 {
-    while (tot) {
+    while (tot)
+    {
         tot = 0;
-        for (int i = 1; i <= cnt; i++) {
+        for (int i = 1; i <= cnt; i++)
+        {
             if (Son[i] == 0)
                 continue;
             p[++tot] = Son[i];
@@ -48,7 +52,8 @@ void get()
         for (int i = 1; i <= cnt; i++)
             if (Son[i] == 0)
                 swap(Son[i], Son[cnt]), cnt--;
-        for (int i = 1; i <= cnt; i++) {
+        for (int i = 1; i <= cnt; i++)
+        {
             if (Son[i] == 0)
                 continue;
             if (a[pre[Son[i]]] == a[Son[i]])

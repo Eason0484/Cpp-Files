@@ -1,6 +1,6 @@
 #include <cstring>
-#include <stack>
 #include <iostream>
+#include <stack>
 using namespace std;
 stack<char> stk;
 char str[256];
@@ -16,7 +16,7 @@ void Operate(char str[])
 		}
 		else if (str[i] == ')' || str[i] == ']')
 		{
-			if(stk.empty())
+			if (stk.empty())
 			{
 				cout << "WRONG\n";
 				return;

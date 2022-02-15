@@ -5,8 +5,10 @@ int n, i;
 int main()
 {
     scanf("d", &n);
-    for (i = 2; i * i <= n; i++) {
-        while (n % i == 0) {
+    for (i = 2; i * i <= n; i++)
+    {
+        while (n % i == 0)
+        {
             printf("%d ", i);
             n = n / i;
         }

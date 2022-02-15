@@ -8,11 +8,13 @@ int main()
     int maxn, minn, a[21], i, j, n, sum;
     double score, m, maxscore = 0;
     scanf("%d%lf", &n, &m);
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++)
+    {
         maxn = 0;
         minn = 10;
         sum = 0;
-        for (j = 1; j <= m; j++) {
+        for (j = 1; j <= m; j++)
+        {
             scanf("%d", &a[j]);
             maxn = max(a[j], maxn);
             minn = min(a[j], minn);

@@ -8,7 +8,8 @@ int main()
     cin >> n;
     cin >> s;
     int i;
-    for (i = 0; s[i] != '\0'; i++) {
+    for (i = 0; s[i] != '\0'; i++)
+    {
         s[i] = ((s[i] - 'a' + n) % 26 + 'a');
     }
     cout << s << endl;

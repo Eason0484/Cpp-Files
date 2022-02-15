@@ -1,6 +1,6 @@
+#include <cstring>
 #include <iostream>
 #include <stack>
-#include <cstring>
 using namespace std;
 char str[256];
 stack<char> stk;

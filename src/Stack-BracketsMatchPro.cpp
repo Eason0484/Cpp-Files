@@ -1,9 +1,9 @@
-#include <iostream>
 #include <cstring>
+#include <iostream>
 #include <stack>
 using namespace std;
 stack<char> stk;
-char order[8] = {'{','[','(','<','}',']',')','>'};
+char order[8] = {'{', '[', '(', '<', '}', ']', ')', '>'};
 char str[256][256];
 void Judge(char str[])
 {
@@ -13,7 +13,7 @@ void Judge(char str[])
 		stk.push(str[i]);
 		if (str[i] == order[4] || str[i] == order[5] || str[i] == order[6] || str[i] == order[7])
 		{
-			if(stk.empty())
+			if (stk.empty())
 			{
 				cout << "WRONG\n";
 				return;

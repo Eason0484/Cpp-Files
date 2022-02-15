@@ -27,12 +27,12 @@ long long ways(long long n)
 	}
 	default:
 	{
-//		long long ans = 0;
-//		for (long long i = 1; i < n; i++)
-//		{
-//			ans += ways(i);
-//		}
-//		return ans;
+		//		long long ans = 0;
+		//		for (long long i = 1; i < n; i++)
+		//		{
+		//			ans += ways(i);
+		//		}
+		//		return ans;
 		return ways(n - 1) + ways(n - 2);
 		break;
 	}

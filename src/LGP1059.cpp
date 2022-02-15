@@ -4,12 +4,14 @@
 using namespace std;
 int main()
 {
-    int a[1023] = { 0 }, i, n, k = 0, j;
+    int a[1023] = {0}, i, n, k = 0, j;
     scanf("%d", &n);
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
             if (i != j && i < j && a[i] == a[j])
                 k++;
         }

@@ -1,7 +1,7 @@
-#include <iostream>
-#include <cstring>
-#include <stack>
 #include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <stack>
 const int N = 1024;
 using namespace std;
 stack<int> exp;
@@ -17,38 +17,38 @@ int Operate(string inputExp)
 			exp.pop();
 			tmp[0] = exp.top();
 			exp.pop();
-			switch(inputExp[i])
+			switch (inputExp[i])
 			{
-				case '+':
-				{
-					temp = tmp[0] + tmp[1];
-					exp.push(temp);
-					break;
-				}
-				case '-':
-				{
-					temp = tmp[0] - tmp[1];
-					exp.push(temp);
-					break;
-				}
-				case '*':
-				{
-					temp = tmp[0] * tmp[1];
-					exp.push(temp);
-					break;
-				}
-				case '/':
-				{
-					temp = tmp[0] / tmp[1];
-					exp.push(temp);
-					break;
-				}
+			case '+':
+			{
+				temp = tmp[0] + tmp[1];
+				exp.push(temp);
+				break;
+			}
+			case '-':
+			{
+				temp = tmp[0] - tmp[1];
+				exp.push(temp);
+				break;
+			}
+			case '*':
+			{
+				temp = tmp[0] * tmp[1];
+				exp.push(temp);
+				break;
+			}
+			case '/':
+			{
+				temp = tmp[0] / tmp[1];
+				exp.push(temp);
+				break;
+			}
 			}
 		}
-		else if (inputExp[i] >= '0' && inputExp[i] <='9')
+		else if (inputExp[i] >= '0' && inputExp[i] <= '9')
 		{
 			temp = 0;
-			while(inputExp[i] != ' ')
+			while (inputExp[i] != ' ')
 			{
 				temp = temp * 10 + inputExp[i++] - '0';
 				exp.push(temp);

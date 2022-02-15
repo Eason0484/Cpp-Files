@@ -9,15 +9,18 @@ int main()
     int dx = 1;
     int dy = 1;
     int cnt = 0;
-    while (cnt != 2) {
+    while (cnt != 2)
+    {
         cnt = 0;
         x = x + dx;
         y = y + dy;
-        if (x == 1 || x == n) {
+        if (x == 1 || x == n)
+        {
             ++cnt;
             dx = -dx;
         }
-        if (y == 1 || y == m) {
+        if (y == 1 || y == m)
+        {
             ++cnt;
             dy = -dy;
         }

@@ -6,7 +6,8 @@ int main()
     const int N = 10;
     int n, ans = 0;
     cin >> n;
-    if (n > 30 || n < 10) {
+    if (n > 30 || n < 10)
+    {
         cout << "0" << endl;
         return 0;
     }

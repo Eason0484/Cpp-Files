@@ -5,7 +5,8 @@ using namespace std;
 int main()
 {
     int a[10], i, j, v[10], bool1;
-    for (i = 192; i <= 333; i++) {
+    for (i = 192; i <= 333; i++)
+    {
         memset(v, 0, sizeof(v));
         bool1 = 1;
         a[1] = i / 100;
@@ -19,8 +20,10 @@ int main()
         a[9] = i * 3 % 10;
         for (j = 1; j <= 9; j++)
             v[a[j]]++;
-        for (j = 1; j <= 9; j++) {
-            if (v[j] != 1) {
+        for (j = 1; j <= 9; j++)
+        {
+            if (v[j] != 1)
+            {
                 bool1 = 0;
                 break;
             }

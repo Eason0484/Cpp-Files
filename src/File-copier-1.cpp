@@ -1,15 +1,16 @@
-#include<iostream>
-#include<vector>
-#include<Windows.h>
-#include<cstring>
+#include <Windows.h>
+#include <cstring>
+#include <iostream>
+#include <vector>
 using namespace std;
-int main(){
+int main()
+{
 	string s;
-	freopen("output.txt","r",stdin);
-	cin>>s;
+	freopen("output.txt", "r", stdin);
+	cin >> s;
 	fclose(stdin);
-	freopen("output.txt","a",stdout);
-	cout<<s;
+	freopen("output.txt", "a", stdout);
+	cout << s;
 	fclose(stdout);
 	return 0;
 }

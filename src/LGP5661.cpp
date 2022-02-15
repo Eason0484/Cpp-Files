@@ -7,10 +7,12 @@ int main()
     freopen("LGP5661.out", "w", stdout);
     int a[4], tmp[4], i, ticket = 0, n, j, ans = 0;
     cin >> n;
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++)
+    {
         for (j = 1; j <= 3; j++)
             cin >> a[j];
-        if (i == 1) {
+        if (i == 1)
+        {
             if (a[tool] == 0)
                 ticket++;
             ans += a[price];
@@ -18,16 +20,19 @@ int main()
                 tmp[j] = a[j];
             continue;
         }
-        if (a[tool] == 0) {
+        if (a[tool] == 0)
+        {
             ticket++;
             ans += a[price];
         }
-        if (a[tool] == 1) {
+        if (a[tool] == 1)
+        {
             if (ticket == 0)
                 ans += a[price];
             if (a[time] - tmp[time] <= 45 && ticket >= 1)
                 ticket--;
-            if (a[time] - tmp[time] > 45 && ticket >= 1) {
+            if (a[time] - tmp[time] > 45 && ticket >= 1)
+            {
                 ticket = 0;
                 ans += a[price];
             }

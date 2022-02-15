@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-char encoder[26] = { 'C', 'S', 'P', 0 };
+char encoder[26] = {'C', 'S', 'P', 0};
 char decoder[26];
 
 string st;
@@ -13,14 +13,17 @@ int main()
     for (int i = 0; i < 26; ++i)
         if (encoder[i] != 0)
             ++k;
-    for (char x = 'A'; x <= 'Z'; ++x) {
+    for (char x = 'A'; x <= 'Z'; ++x)
+    {
         bool flag = true;
         for (int i = 0; i < 26; ++i)
-            if (encoder[i] == x) {
+            if (encoder[i] == x)
+            {
                 flag = false;
                 break;
             }
-        if (flag) {
+        if (flag)
+        {
             encoder[k] = x;
             ++k;
         }

@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 #include <stack>
 using namespace std;
 const int N = 1024;

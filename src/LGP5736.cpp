@@ -5,7 +5,8 @@ bool p(int a)
     int i;
     if (a == 1 || a == 0)
         return 0;
-    for (i = 2; i * i <= a; i++) {
+    for (i = 2; i * i <= a; i++)
+    {
         if (a % i == 0)
             return 0;
     }
@@ -19,7 +20,8 @@ int main()
     scanf("%d", &n);
     for (i = 1; i <= n; i++)
         scanf("%d", &a[i]);
-    for (i = 1; i <= n; i++) {
+    for (i = 1; i <= n; i++)
+    {
         if (p(a[i]) == 1)
             printf("%d ", a[i]);
     }

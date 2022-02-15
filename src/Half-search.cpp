@@ -8,13 +8,15 @@ int main()
     int a[n];
     for (i = 1; i <= n; i++)
         cin >> a[i];
-    while (low <= high) {
+    while (low <= high)
+    {
         mid = (low + high) / 2;
         if (a[mid] > k)
             high = mid;
         if (a[mid] < k)
             low = mid;
-        if (a[mid] == k) {
+        if (a[mid] == k)
+        {
             jilu = mid;
             break;
         }

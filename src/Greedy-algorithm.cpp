@@ -4,19 +4,22 @@ int main()
 {
     const int N = 6;
     int c[N] = {};
-    int v { N } = { 1, 5, 10, 20, 50, 100 };
+    int v{N} = {1, 5, 10, 20, 50, 100};
     int k, m = 0;
     int i;
     int cc = 0;
-    int r[6] = { 1, 5, 10, 20, 50, 100 }, c[6], k, i, m, sum[6], j, rtn = 0;
+    int r[6] = {1, 5, 10, 20, 50, 100}, c[6], k, i, m, sum[6], j, rtn = 0;
     cin >> k;
     for (i = 0; i < 6; i++)
         cin >> c[i];
     for (i = 0; i < 6; i++)
         sum[i] = c[i];
-    for (i = 5; i >= 0; i--) {
-        for (j = 0; j < sum[i]; j++) {
-            if (k >= sum[i]) {
+    for (i = 5; i >= 0; i--)
+    {
+        for (j = 0; j < sum[i]; j++)
+        {
+            if (k >= sum[i])
+            {
                 c[i] -= 1;
                 k -= r[i];
                 m += 1;
@@ -29,7 +32,8 @@ int main()
         if (k == 0)
             break;
     }
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 6; i++)
+    {
         if (c[i] < 0)
             rtn = 1;
     }

@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <iostream>
 using namespace std;
-void swap(int& a, int& b)
+void swap(int &a, int &b)
 {
     int t = a;
     a = b;

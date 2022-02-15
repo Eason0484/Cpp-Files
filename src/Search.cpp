@@ -7,8 +7,10 @@ int main()
     int a[n];
     for (i = 0; i < n; i++)
         cin >> a[i];
-    for (i = 0; i < n; i++) {
-        if (a[i] == k) {
+    for (i = 0; i < n; i++)
+    {
+        if (a[i] == k)
+        {
             jilu = i + 1;
             break;
         }

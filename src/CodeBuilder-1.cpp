@@ -6,8 +6,10 @@ int main()
     cout << "#include <iostream>\nusing namespace std;\nint main()\n{\n    int a, b;\n    cin >> a >> b;\n";
     int i, j, a, b;
     cin >> a >> b;
-    for (i = 0; i <= a; i++) {
-        for (j = 0; j <= b; j++) {
+    for (i = 0; i <= a; i++)
+    {
+        for (j = 0; j <= b; j++)
+        {
             cout << "    if (a == " << i << " && ";
             cout << "b == " << j << ")";
             cout << " {\n";

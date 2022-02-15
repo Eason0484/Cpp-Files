@@ -5,12 +5,14 @@ using namespace std;
 void qsort(int a[], int l, int r)
 {
     int i = l, j = r, flag = a[(l + r) / 2];
-    do {
+    do
+    {
         while (a[i] < flag)
             i++;
         while (a[j] > flag)
             j--;
-        if (i <= j) {
+        if (i <= j)
+        {
             swap(a[i], a[j]);
             i++;
             j--;
@@ -23,7 +25,7 @@ void qsort(int a[], int l, int r)
 }
 int main()
 {
-    int a[1024] = { 0 }, k, i;
+    int a[1024] = {0}, k, i;
     char ac[1024];
     scanf("%d", &k);
     scanf("%s", ac);

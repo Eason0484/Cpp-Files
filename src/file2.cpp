@@ -8,11 +8,13 @@ int ans;
 
 void dfs(int n, int sum)
 {
-    if (n == 1) {
+    if (n == 1)
+    {
         ans = max(sum, ans);
         return;
     }
-    for (int i = 1; i < n; ++i) {
+    for (int i = 1; i < n; ++i)
+    {
         int a = d[i - 1][0], b = d[i - 1][1];
         int x = d[i][0], y = d[i][1];
         d[i - 1][0] = a + x;

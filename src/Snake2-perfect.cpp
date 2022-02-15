@@ -1,6 +1,6 @@
 /*
-* Author: CSDN--Roninwz
-*/
+ * Author: CSDN--Roninwz
+ */
 #include <conio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -22,14 +22,17 @@ void color(int a) //颜色函数
 void init(int apple[2]) //初始化函数（初始化围墙、显示信息、苹果）
 {
     int i, j; //初始化围墙
-    int wall[N + 2][N + 2] = { { 0 } };
-    for (i = 1; i <= N; i++) {
+    int wall[N + 2][N + 2] = {{0}};
+    for (i = 1; i <= N; i++)
+    {
         for (j = 1; j <= N; j++)
             wall[i][j] = 1;
     }
     color(11);
-    for (i = 0; i < N + 2; i++) {
-        for (j = 0; j < N + 2; j++) {
+    for (i = 0; i < N + 2; i++)
+    {
+        for (j = 0; j < N + 2; j++)
+        {
             if (wall[i][j])
                 cout << "■";
             else
@@ -55,7 +58,7 @@ void init(int apple[2]) //初始化函数（初始化围墙、显示信息、苹
 int main()
 {
     int i, j;
-    int** snake = NULL;
+    int **snake = NULL;
     int apple[2];
     int score = 0;
     int tail[2];
@@ -63,10 +66,11 @@ int main()
     char ch = 'p';
     srand((unsigned)time(NULL));
     init(apple);
-    snake = (int**)realloc(snake, sizeof(int*) * len);
+    snake = (int **)realloc(snake, sizeof(int *) * len);
     for (i = 0; i < len; i++)
-        snake[i] = (int*)malloc(sizeof(int) * 2);
-    for (i = 0; i < len; i++) {
+        snake[i] = (int *)malloc(sizeof(int) * 2);
+    for (i = 0; i < len; i++)
+    {
         snake[i][0] = N / 2;
         snake[i][1] = N / 2 + i;
         gotoxy(snake[i][0], snake[i][1]);
@@ -80,18 +84,21 @@ int main()
         gotoxy(tail[0], tail[1]);
         color(11);
         cout << "■" << endl;
-        for (i = len - 1; i > 0; i--) {
+        for (i = len - 1; i > 0; i--)
+        {
             snake[i][0] = snake[i - 1][0];
             snake[i][1] = snake[i - 1][1];
             gotoxy(snake[i][0], snake[i][1]);
             color(14);
             cout << "★" << endl;
         }
-        if (kbhit()) {
+        if (kbhit())
+        {
             gotoxy(0, N + 2);
             ch = getche();
         }
-        switch (ch) {
+        switch (ch)
+        {
         case 'w':
             snake[0][1]--;
             break;
@@ -115,8 +122,8 @@ int main()
         {
             score++;
             len++;
-            snake = (int**)realloc(snake, sizeof(int*) * len);
-            snake[len - 1] = (int*)malloc(sizeof(int) * 2);
+            snake = (int **)realloc(snake, sizeof(int *) * len);
+            snake[len - 1] = (int *)malloc(sizeof(int) * 2);
             apple[0] = rand() % N + 1;
             apple[1] = rand() % N + 1;
             gotoxy(apple[0], apple[1]);

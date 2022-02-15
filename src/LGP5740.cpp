@@ -1,7 +1,8 @@
 #include <cstring>
 #include <iostream>
 using namespace std;
-struct student {
+struct student
+{
     char name[100];
     int c, m, e;
 };
@@ -13,7 +14,8 @@ int main()
     max.m = 0;
     max.e = 0;
     scanf("%d", &n);
-    for (i = 0; i < n; i++) {
+    for (i = 0; i < n; i++)
+    {
         scanf("%s%d%d%d", a.name, &a.c, &a.m, &a.e);
         if (a.c + a.m + a.e > max.c + max.m + max.e)
             max = a;

@@ -17,7 +17,7 @@ int main()
             {
                 cout << "#";
             }
-        }        
+        }
         cout << endl;
     }
     for (i = input - 1; i >= 1; i--)

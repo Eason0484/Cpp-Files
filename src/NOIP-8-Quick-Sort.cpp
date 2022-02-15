@@ -4,12 +4,14 @@ using namespace std;
 void qsort(int a[], int l, int r)
 {
     int i = l, j = r, flag = a[(l + r) / 2];
-    do {
+    do
+    {
         while (a[i] < flag)
             i++;
         while (a[j] > flag)
             j--;
-        if (i <= j) {
+        if (i <= j)
+        {
             swap(a[i], a[j]);
             i++;
             j--;

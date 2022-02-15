@@ -23,12 +23,14 @@ int main()
 {
     long long A, B, C, x, y, z, cnt = 0;
     cin >> A >> B >> C;
-    for (x = 123; x <= 987; x++) {
+    for (x = 123; x <= 987; x++)
+    {
         if (x * B % A || x * C % A)
             continue;
         y = x * B / A;
         z = x * C / A;
-        if (check(x, y, z)) {
+        if (check(x, y, z))
+        {
             printf("%lld %lld %lld\n", x, y, z);
             cnt++;
         }

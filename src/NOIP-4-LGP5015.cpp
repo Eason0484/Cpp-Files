@@ -10,7 +10,8 @@ int main()
     cin >> s;
     int l, ans, i;
     l = s.length();
-    for (i = 0; i < l; i++) {
+    for (i = 0; i < l; i++)
+    {
         if (s[i] >= 'a' && s[i] <= 'z')
             ans++;
         if (s[i] >= '0' && s[i] <= '9')

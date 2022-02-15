@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-void fun(char* a, char* b)
+void fun(char *a, char *b)
 {
     a = b;
     (*a)++;

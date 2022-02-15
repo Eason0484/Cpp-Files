@@ -18,12 +18,14 @@ void quickSort(int left, int right)
     int i = left, j = right, m = a[(left + right) / 2], temp;
     if (left >= right)
         return;
-    do {
+    do
+    {
         while (a[j] > m)
             j--;
         while (a[i] < m)
             i++;
-        if (i <= j) {
+        if (i <= j)
+        {
             temp = a[i];
             a[i] = a[j];
             a[j] = temp;

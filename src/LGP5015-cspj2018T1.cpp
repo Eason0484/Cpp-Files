@@ -6,8 +6,10 @@ int main()
     string s;
     int ans = 0, i;
     cin >> s;
-    for (i = 0; i < s.size(); i++) {
-        if (s[i] != ' ' && s[i] != '\n') {
+    for (i = 0; i < s.size(); i++)
+    {
+        if (s[i] != ' ' && s[i] != '\n')
+        {
             ans++;
         }
     }

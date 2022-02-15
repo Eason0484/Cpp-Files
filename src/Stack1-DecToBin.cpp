@@ -4,13 +4,13 @@ const int MAXN = 101;
 int bin[MAXN], top = 0;
 void Push(int item)
 {
-    top++;
-    bin[top] = item;
+	top++;
+	bin[top] = item;
 }
 void Search()
 {
 	int i;
-	for(i = top; i >= 1; i--)
+	for (i = top; i >= 1; i--)
 	{
 		cout << bin[i];
 	}
@@ -18,11 +18,11 @@ void Search()
 }
 void PushToBin(int num)
 {
-	if(num == 0)
+	if (num == 0)
 	{
 		Push(num);
 	}
-	while(num != 0)
+	while (num != 0)
 	{
 		int tmp = num % 2;
 		num /= 2;
@@ -31,10 +31,9 @@ void PushToBin(int num)
 }
 int main()
 {
-    int dec, i, n;
-    cin >> dec;
+	int dec, i, n;
+	cin >> dec;
 	PushToBin(dec);
 	Search();
-    return 0;
+	return 0;
 }
-

@@ -1,13 +1,13 @@
 #include <iostream>
-void PreOrder(int T); //前序遍历 
-void InOrder(int T); //中序遍历 
-void PostOrder(int T); //后序遍历 
+void PreOrder(int T);  //前序遍历
+void InOrder(int T);   //中序遍历
+void PostOrder(int T); //后序遍历
 class BNode
 {
-	public:
-		char data;
-		int lchild, rchild; 
-}node[101];
+public:
+	char data;
+	int lchild, rchild;
+} node[101];
 int main()
 {
 	freopen("C:/Users/Eason/Desktop/input.txt", "r", stdin);
@@ -35,9 +35,9 @@ int main()
 void PreOrder(int T)
 {
 	using namespace std;
-	if(T)
+	if (T)
 	{
-		if(node[T].data)
+		if (node[T].data)
 		{
 			cout << node[T].data << " ";
 		}
@@ -48,10 +48,10 @@ void PreOrder(int T)
 void InOrder(int T)
 {
 	using namespace std;
-	if(T)
+	if (T)
 	{
 		PreOrder(node[T].lchild);
-		if(node[T].data)
+		if (node[T].data)
 		{
 			cout << node[T].data << " ";
 		}
@@ -61,11 +61,11 @@ void InOrder(int T)
 void PostOrder(int T)
 {
 	using namespace std;
-	if(T)
+	if (T)
 	{
 		PreOrder(node[T].lchild);
 		PreOrder(node[T].rchild);
-		if(node[T].data)
+		if (node[T].data)
 		{
 			cout << node[T].data << " ";
 		}

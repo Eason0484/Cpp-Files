@@ -1,17 +1,17 @@
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 using namespace std;
 const int N = 101;
-int stack[N]={0}, top = 0;
+int stack[N] = {0}, top = 0;
 void Search()
 {
-	if(top == 0)
+	if (top == 0)
 	{
 		cout << "Null\n\n";
 	}
 	else
 	{
-		for(int i = 1; i <= top; i++)
+		for (int i = 1; i <= top; i++)
 		{
 			cout << stack[i] << endl;
 		}
@@ -20,7 +20,7 @@ void Search()
 }
 void Push(int item)
 {
-	if(top < N)
+	if (top < N)
 	{
 		top++;
 		stack[top] = item;
@@ -28,7 +28,8 @@ void Push(int item)
 }
 void Pop()
 {
-	if(top > 0){
+	if (top > 0)
+	{
 		top--;
 	}
 }
@@ -42,7 +43,7 @@ int GetTop()
 }
 bool IsEmpty()
 {
-	if(top == 0)
+	if (top == 0)
 	{
 		return 1;
 	}
@@ -54,13 +55,15 @@ int main()
 	Push(4);
 	Push(5);
 	Search();
-	cout << IsEmpty() << " " << GetTop() << endl << endl;
+	cout << IsEmpty() << " " << GetTop() << endl
+		 << endl;
 	Pop();
 	Search();
-	cout << IsEmpty() << " " << GetTop() << endl << endl;
+	cout << IsEmpty() << " " << GetTop() << endl
+		 << endl;
 	Clear();
 	Search();
-	cout << IsEmpty() << " " << GetTop() << endl << endl;
+	cout << IsEmpty() << " " << GetTop() << endl
+		 << endl;
 	return 0;
 }
-

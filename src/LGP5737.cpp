@@ -12,12 +12,14 @@ int main()
     freopen("LGP5737.out", "w", stdout);
     int y1, y2, i, ans = 0;
     scanf("%d%d", &y1, &y2);
-    for (i = y1; i <= y2; i++) {
+    for (i = y1; i <= y2; i++)
+    {
         if (IsLeapYear(i) == 1)
             ans++;
     }
     printf("%d\n", ans);
-    for (i = y1; i <= y2; i++) {
+    for (i = y1; i <= y2; i++)
+    {
         if (IsLeapYear(i) == 1)
             printf("%d ", i);
     }

@@ -7,9 +7,11 @@ int main()
 
     cin >> n >> L >> R;
 
-    for (i = L; i <= R; i++) { //求余，取所有得数最大值
+    for (i = L; i <= R; i++)
+    { //求余，取所有得数最大值
         tmp = i % n;
-        if (tmp >= ans) {
+        if (tmp >= ans)
+        {
             ans = tmp;
         }
     }
