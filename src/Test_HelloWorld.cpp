@@ -6,8 +6,8 @@ int main()
     freopen("../build/output.txt", "w", stdout);
     int a, b;
     cin >> a >> b;
-    int s = a + b;
-    cout << s << "\nHello,World!\n";
+    int sum = a + b;
+    cout << sum << "\nHello,World!\n";
     fclose(stdin);
     fclose(stdout);
     return 0;

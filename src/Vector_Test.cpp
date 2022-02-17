@@ -6,15 +6,15 @@ int main()
     int num;
     cin >> num;
 
-    vector<int> vecNum;
+    vector<int> vecNums;
     int temp;
     for (int i = 0; i < num; ++i)
     {
         cin >> temp;
-        vecNum.push_back(temp);
+        vecNums.push_back(temp);
     }
 
-    for (vector<int>::iterator itr = vecNum.begin(); itr != vecNum.end(); ++itr)
+    for (vector<int>::iterator itr = vecNums.begin(); itr != vecNums.end(); ++itr)
     {
         cout << *itr << endl;
     }
