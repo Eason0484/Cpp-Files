@@ -2,7 +2,7 @@
 int main(int argc, char **argv)
 {
     using namespace std;
-    cout << "\n请按任意键继续..." << endl;
+    cout << "请按任意键继续..." << endl;
     cin.clear();
     cin.sync();
     cin.get();
