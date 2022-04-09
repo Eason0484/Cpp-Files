@@ -16,7 +16,7 @@ int main()
 	InOrder(root);
 	cout << endl;
 	PostOrder(root);
-	getchar();
+	cin.get();
 	return 0;
 }
 int BuildTree(int T)
