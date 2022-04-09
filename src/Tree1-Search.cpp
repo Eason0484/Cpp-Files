@@ -27,6 +27,8 @@ int main()
 	cout << endl;
 	PostOrder(1);
 	cout << endl;
+	getchar();
+	return 0;
 }
 void PreOrder(int T)
 {
