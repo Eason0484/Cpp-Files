@@ -10,8 +10,6 @@ public:
 } node[101];
 int main()
 {
-	freopen("C:/Users/Eason/Desktop/input.txt", "r", stdin);
-	freopen("C:/Users/Eason/Desktop/output.txt", "w", stdout);
 	using namespace std;
 	int n, i;
 	cin >> n;
@@ -29,8 +27,6 @@ int main()
 	cout << endl;
 	PostOrder(1);
 	cout << endl;
-	fclose(stdin);
-	fclose(stdout);
 }
 void PreOrder(int T)
 {
