@@ -1,6 +1,5 @@
 #include <iostream>
 void DFS(int);
-bool Check();
 int numbers, a[100], r;
 bool visited[100];
 int main(int argc, char **argv)
@@ -14,21 +13,10 @@ int main(int argc, char **argv)
     cin.get();
     return 0;
 }
-bool Check()
-{
-    for (int i = 1; i <= r - 1; i++)
-    {
-        if (a[i] > a[i + 1])
-        {
-            return 0;
-        }
-    }
-    return 1;
-}
 void DFS(int step)
 {
     using namespace std;
-    if (step == r + 1 && Check())
+    if (step == r + 1)
     {
         for (int i = 1; i <= r; i++)
         {
@@ -38,7 +26,7 @@ void DFS(int step)
     }
     else
     {
-        for (int i = 1; i <= numbers; i++)
+        for (int i = a[step - 1] + 1; i <= numbers; i++)
         {
             if (visited[i] == 0)
             {
