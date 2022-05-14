@@ -1,32 +1,40 @@
 #include <iostream>
 void DFS(int);
-int numbers, a[100], b[4], cnt = 0;
+bool Check();
+int numbers, a[100], r;
 bool visited[100];
 int main(int argc, char **argv)
 {
     using namespace std;
-    numbers = 9;
+    cin >> numbers >> r;
     DFS(1);
-    cout << cnt << endl;
     cout << "请按任意键继续...";
     cin.clear();
     cin.sync();
     cin.get();
     return 0;
 }
+bool Check()
+{
+    for (int i = 1; i <= r - 1; i++)
+    {
+        if (a[i] > a[i + 1])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
 void DFS(int step)
 {
     using namespace std;
-    if (step == numbers + 1)
+    if (step == r + 1 && Check())
     {
-        b[1] = a[1] * 100 + a[2] * 10 + a[3];
-        b[2] = a[4] * 100 + a[5] * 10 + a[6];
-        b[3] = a[7] * 100 + a[8] * 10 + a[9];
-        if (b[1] + b[2] == b[3] && b[1] < b[2])
+        for (int i = 1; i <= r; i++)
         {
-            cout << b[1] << " + " << b[2] << " = " << b[3] << endl;
-            cnt++;
+            cout << a[i] << " ";
         }
+        cout << endl;
     }
     else
     {
