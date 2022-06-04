@@ -42,6 +42,10 @@ int main()
         map[l][r] = 0;
     }
     DFS(sx, sy);
-    cout << total; //输出总数；
+    cout << total << endl; //输出总数；
+    cout << "请按任意键继续...";
+    cin.clear();
+    cin.sync();
+    cin.get();
     return 0;
 }
