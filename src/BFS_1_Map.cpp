@@ -1,4 +1,3 @@
-#include <cstdio>
 #include <iostream>
 #include <queue>
 using namespace std;
@@ -19,6 +18,29 @@ queue<Node> que;
 void BFS();
 int main()
 {
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= m; j++)
+        {
+            cin >> map[i][j];
+        }
+    }
+    cin >> sx >> sy >> ex >> ey;
+    BFS();
+    if (flag)
+    {
+        cout << que.back().step << endl;
+    }
+    else
+    {
+        cout << -1 << endl;
+    }
+    cout << "请按任意键继续...";
+    cin.clear();
+    cin.sync();
+    cin.get();
+    return 0;
 }
 
 void BFS()
