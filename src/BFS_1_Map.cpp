@@ -1,5 +1,5 @@
-#include <iostream>
 #include <cstdio>
+#include <iostream>
 #include <queue>
 using namespace std;
 struct Node
@@ -29,13 +29,13 @@ void BFS()
     sn.step = 0;
     v[sx][sy] = true;
     que.push(sn);
-    while(!que.empty())
+    while (!que.empty())
     {
         for (int i = 0; i < 4; i++)
         {
             int nx = que.front().x + np[i][0];
             int ny = que.front().y + np[i][0];
-            if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && a[nx][ny] == 0 && !v[nx][ny])
+            if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && v[nx][ny] == 0 && !v[nx][ny])
             {
                 v[nx][ny] = true;
                 Node newnode;
