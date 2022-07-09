@@ -56,7 +56,7 @@ void BFS()
         for (int i = 0; i < 4; i++)
         {
             int nx = que.front().x + np[i][0];
-            int ny = que.front().y + np[i][0];
+            int ny = que.front().y + np[i][1];
             if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && v[nx][ny] == 0 && !v[nx][ny])
             {
                 v[nx][ny] = true;
@@ -68,7 +68,7 @@ void BFS()
             }
             if (nx == ex && ny == ey)
             {
-                flag == true;
+                flag = true;
                 return;
             }
         }
