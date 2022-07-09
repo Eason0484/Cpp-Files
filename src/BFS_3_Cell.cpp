@@ -3,7 +3,8 @@
 
 using namespace std;
 
-int a[101], map[101][101];
+int map[101][101];
+int m, n;
 bool v[101];
 queue<int> que;
 void BFS();
@@ -11,6 +12,14 @@ void BFS();
 int main(int argc, char **)
 {
     using namespace std;
+    cin >> m >> n;
+    for (int i = 1; i <= m; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            cin >> map[i][j];
+        }
+    }
     BFS();
     cout << "\n请按任意键继续...";
     cin.clear();
@@ -21,20 +30,4 @@ int main(int argc, char **)
 
 void BFS()
 {
-    que.push(1);
-    v[1] = true;
-    while (!que.empty())
-    {
-        int cur = que.front();
-        for (int i = 1; i <= 8; i++)
-        {
-            if (map[cur][i] == 0 && !v[i])
-            {
-                v[i] = true;
-                que.push(i);
-                a[i] = cur;
-            }
-        }
-        que.pop();
-    }
 }
