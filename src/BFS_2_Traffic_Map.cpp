@@ -22,7 +22,7 @@ int map[9][9] = {
 
 int main(int argc, char **)
 {
-    int k = 0;
+    int k = 8;
     BFS();
     cout << char(k + 64);
     while (a[k])
@@ -30,7 +30,7 @@ int main(int argc, char **)
         cout << "-" << char(a[k] + 64);
         k = a[k];
     }
-    cout << "请按任意键继续...";
+    cout << "\n请按任意键继续...";
     cin.clear();
     cin.sync();
     cin.get();
