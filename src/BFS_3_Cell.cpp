@@ -1,42 +1,36 @@
 #include <iostream>
 #include <queue>
-using namespace std;
-struct Node
-{
-    int x;
-    int y;
-    int step;
-};
-int map[101][101];
-bool v[101][101];
 
-int n, m;
-int sx, sy, ex, ey;
-bool flag = false;
-int np[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-queue<Node> que;
+using namespace std;
+
+int a[101];
+bool v[101];
+queue<int> que;
 void BFS();
-int main()
+
+int map[9][9] = {
+    {0, 0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 1, 0, 0, 0, 1, 0, 1, 1},
+    {0, 0, 1, 1, 1, 1, 0, 1, 1},
+    {0, 0, 1, 1, 0, 0, 1, 1, 1},
+    {0, 0, 1, 0, 1, 1, 1, 0, 1},
+    {0, 1, 1, 0, 1, 1, 1, 0, 0},
+    {0, 0, 0, 1, 1, 1, 1, 1, 0},
+    {0, 1, 1, 1, 0, 0, 1, 1, 0},
+    {0, 1, 1, 1, 1, 0, 0, 0, 1},
+};
+
+int main(int argc, char **)
 {
-    cin >> n >> m;
-    for (int i = 1; i <= n; i++)
-    {
-        for (int j = 1; j <= m; j++)
-        {
-            cin >> map[i][j];
-        }
-    }
-    cin >> sx >> sy >> ex >> ey;
+    int k = 8;
     BFS();
-    if (flag)
+    cout << char(k + 64);
+    while (a[k])
     {
-        cout << que.back().step << endl;
+        cout << "-" << char(a[k] + 64);
+        k = a[k];
     }
-    else
-    {
-        cout << -1 << endl;
-    }
-    cout << "请按任意键继续...";
+    cout << "\n请按任意键继续...";
     cin.clear();
     cin.sync();
     cin.get();
@@ -45,31 +39,18 @@ int main()
 
 void BFS()
 {
-    Node sn;
-    sn.x = sx;
-    sn.y = sy;
-    sn.step = 0;
-    v[sx][sy] = true;
-    que.push(sn);
+    que.push(1);
+    v[1] = true;
     while (!que.empty())
     {
-        for (int i = 0; i < 4; i++)
+        int cur = que.front();
+        for (int i = 1; i <= 8; i++)
         {
-            int nx = que.front().x + np[i][0];
-            int ny = que.front().y + np[i][1];
-            if (nx >= 1 && nx <= n && ny >= 1 && ny <= m && v[nx][ny] == 0 && !v[nx][ny])
+            if (map[cur][i] == 0 && !v[i])
             {
-                v[nx][ny] = true;
-                Node newnode;
-                newnode.x = nx;
-                newnode.y = ny;
-                newnode.step = que.front().step + 1;
-                que.push(newnode);
-            }
-            if (nx == ex && ny == ey)
-            {
-                flag = true;
-                return;
+                v[i] = true;
+                que.push(i);
+                a[i] = cur;
             }
         }
         que.pop();
