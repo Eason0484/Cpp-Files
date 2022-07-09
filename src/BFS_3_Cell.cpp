@@ -21,20 +21,10 @@ int main()
     cin >> n >> m;
     for (int i = 0; i < n; i++)
     {
-        cin.getline(s, 101);
         for (int j = 0; j < m; j++)
         {
-            if (s[j] != '0')
-            {
-                a[i][j] = 1;
-            }
-        }
-    }
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            if (a[i][j] == 1 && !book[i])
+            cin >> a[i][j];
+            if (a[i][j] != 0 && !book[i][j])
             {
                 BFS(i, j);
             }
