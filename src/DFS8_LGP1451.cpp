@@ -18,12 +18,15 @@ int main(int argc, char **argv)
             cin >> cells[i][j];
         }
     }
-    for (int i = 0; i <= m; i++)
+    for (int i = 0; i < m; i++)
     {
-        for (int j = 0; j <= n; j++)
+        for (int j = 0; j < n; j++)
         {
-            DFS(i, j);
-            ans++;
+            if (cells[i][j] == 0 && visited[i][j] == 1)
+            {
+                DFS(i, j);
+                ans++;
+            }
         }
     }
     cout << ans << "\n请按任意键继续...";
