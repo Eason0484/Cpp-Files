@@ -12,30 +12,30 @@ void Solution();
 
 int main()
 {
-	using namespace std;
-	cin >> n;
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a[i];
-	}
-	Solution();
-	cout << max1 << endl;
-	return 0;
+    using namespace std;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i];
+    }
+    Solution();
+    cout << max1 << endl;
+    return 0;
 }
 
 void Solution()
 {
-	using namespace std;
-	dp[0] = a[0]; // Edge situation
-	for (int i = 1; i < n; i++)
-	{
-		dp[i] = max(a[i], dp[i - 1] + a[i]);
-	}
-	for (int i = 1; i < n; i++)
-	{
-		if (dp[i] > max1)
-		{
-			max1 = dp[i];
-		}
-	}
+    using namespace std;
+    dp[0] = a[0]; // Edge situation
+    for (int i = 1; i < n; i++)
+    {
+        dp[i] = max(a[i], dp[i - 1] + a[i]);
+    }
+    for (int i = 1; i < n; i++)
+    {
+        if (dp[i] > max1)
+        {
+            max1 = dp[i];
+        }
+    }
 }
