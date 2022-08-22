@@ -26,7 +26,7 @@ void Solution()
 		{
 			if (j >= wt[i])
 			{
-				dp[i][j] = dp[i - 1][j - wt[i]] + vl[i];
+				dp[i][j] = max(dp[i - 1][j], dp[i][j - wt[i]] + vl[i]);
 			}
 			else
 			{
@@ -48,10 +48,11 @@ void Solution()
 
 /*
 Input:
-8 3
-2 3
-5 4
-5 5
+10 4
+2 1
+3 3
+4 5
+7 9
 Output:
-8
+12
 */
