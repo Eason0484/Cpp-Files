@@ -7,43 +7,43 @@ void Solution();
 
 int main()
 {
-	using namespace std;
-	cin >> v >> itmCnt;
-	for (int i = 1; i <= itmCnt; i++)
-	{
-		cin >> wt[i] >> vl[i];
-	}
-	Solution();
-	return 0;
+    using namespace std;
+    cin >> v >> itmCnt;
+    for (int i = 1; i <= itmCnt; i++)
+    {
+        cin >> wt[i] >> vl[i];
+    }
+    Solution();
+    return 0;
 }
 
 void Solution()
 {
-	using namespace std;
-	for (int i = 1; i <= itmCnt; i++)
-	{
-		for (int j = 1; j <= v; j++)
-		{
-			if (j >= wt[i])
-			{
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - wt[i]] + vl[i]);
-			}
-			else
-			{
-				dp[i][j] = dp[i - 1][j];
-			}
-		}
-	}
-	cout << "dp[i][j]:\n";
-	for (int i = 1; i <= itmCnt; i++)
-	{
-		for (int j = 1; j <= v; j++)
-		{
-			cout << dp[i][j] << " ";
-		}
-		cout << endl;
-	}
-	cout << "Answer: " << dp[itmCnt][v] << endl;
+    using namespace std;
+    for (int i = 1; i <= itmCnt; i++)
+    {
+        for (int j = 1; j <= v; j++)
+        {
+            if (j >= wt[i])
+            {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - wt[i]] + vl[i]);
+            }
+            else
+            {
+                dp[i][j] = dp[i - 1][j];
+            }
+        }
+    }
+    cout << "dp[i][j]:\n";
+    for (int i = 1; i <= itmCnt; i++)
+    {
+        for (int j = 1; j <= v; j++)
+        {
+            cout << dp[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << "Answer: " << dp[itmCnt][v] << endl;
 }
 
 /*
