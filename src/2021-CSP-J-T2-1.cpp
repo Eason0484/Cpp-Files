@@ -39,5 +39,9 @@ int main()
     string str;
     cin >> str;
     cout << decode(str) << endl;
+    cout << "请按任意键继续. . .";
+    cin.clear();
+    cin.sync();
+    cin.get();
     return 0;
 }
