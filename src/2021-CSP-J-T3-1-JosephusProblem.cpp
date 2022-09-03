@@ -29,5 +29,9 @@ int main()
         }
     }
     cout << ans << endl;
+    cout << "请按任意键继续. . .";
+    cin.clear();
+    cin.sync();
+    cin.get();
     return 0;
 }
